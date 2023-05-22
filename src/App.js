@@ -5,7 +5,10 @@ import useLocalStorageState from "use-local-storage-state";
 import "./App.css";
 
 function App() {
-  const [activities, setActivities] = useLocalStorageState('activities', {defaultValue: []});
+  const [activities, setActivities] = useLocalStorageState("activities", {
+    defaultValue: [],
+  });
+  const goodWeather = true;
 
   function handleAddActivity(newActivity) {
     setActivities((current) => [...current, newActivity]);
@@ -15,7 +18,11 @@ function App() {
   return (
     <main>
       <Form onAddActivity={handleAddActivity} />
-      <List activities={activities}/>
+      <List
+        activities={activities.filter(
+          (activity) => activity.isGoodWeather === goodWeather
+        )}
+      />
     </main>
   );
 }
