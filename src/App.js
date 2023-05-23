@@ -11,7 +11,6 @@ function App() {
   });
   const [weather, setWeather] = useState([]);
 
-
   useEffect(() => {
     async function fetchWeather() {
       try {
@@ -38,12 +37,14 @@ function App() {
   }
 
   function handleDeleteActivity(activityToDelete) {
-    setActivities((current) => current.filter((activity) => activity.id !== activityToDelete));
+    setActivities((current) =>
+      current.filter((activity) => activity.id !== activityToDelete)
+    );
   }
 
   return (
-    <main>
-      <Header weather={weather} />
+    <main className="main">
+      <Header className="header" weather={weather} />
       <List
         activities={activities.filter(
           (activity) => activity.isGoodWeather === weather.isGoodWeather
@@ -51,7 +52,7 @@ function App() {
         goodWeather={weather.isGoodWeather}
         onDeleteActivity={handleDeleteActivity}
       />
-      <Form onAddActivity={handleAddActivity}/>
+      <Form className="form" onAddActivity={handleAddActivity} />
     </main>
   );
 }

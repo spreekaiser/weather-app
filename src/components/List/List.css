@@ -1,1 +1,46 @@
-.List {}
+.list__heading {
+  margin: 0;
+  margin-block-start: 0;
+  margin-top: 2em;
+  padding: 0;
+}
+
+.list__top {
+  margin: 0;
+  margin-top: 1.5em;
+  padding: 0;
+}
+
+.list {
+  margin: 0;
+
+  padding: 0;
+}
+
+.list__item {
+  margin: 0;
+  margin-top: 1em;
+  padding: 2% 0;
+  width: 100%;
+  max-width: 40rem;
+  height: max-content;
+  list-style: none;
+  background-color: rgb(65, 65, 65);
+  color: aliceblue;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list__activity {
+  margin: 0;
+  padding: 0;
+  margin-left: 2rem;
+  align-self: center;
+}
+
+.list__button {
+  height: 2em;
+  margin-right: 1.5rem;
+  align-self: center;
+}
