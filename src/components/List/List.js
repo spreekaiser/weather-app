@@ -6,15 +6,20 @@ export default function List({ activities, goodWeather, onDeleteActivity }) {
     <>
       <h3 className="list__heading">
         {goodWeather
-          ? "It is good Weather 🕺🏻 go out and have fun!"
-          : "It is realy bad weather. Stay home 😩 and do the best you can."}
+          ? `It is good Weather 🕺🏻 \n go out and have fun!`
+          : "It is realy bad weather. \n Stay home 😩 and do the best you can."}
       </h3>
-      <p>You could do:</p>
+      <p className="list__top">You could do:</p>
       <ul className="list">
         {activities?.map((activity) => (
           <li key={activity.id} className="list__item">
-            <h3>{activity.name}</h3>
-            <button onClick={() => onDeleteActivity(activity.id)}>✕</button>
+            <h3 className="list__activity">{activity.name}</h3>
+            <button
+              className="list__button"
+              onClick={() => onDeleteActivity(activity.id)}
+            >
+              ✕
+            </button>
           </li>
         ))}
       </ul>

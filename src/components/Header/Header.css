@@ -1,1 +1,8 @@
-.Header {}
+.header__emoji {
+  margin: 0;
+  font-size: 3em;
+}
+
+.header__temperature {
+  margin: 0;
+}

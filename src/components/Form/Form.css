@@ -1,1 +1,42 @@
-.Form {}
+.form {
+  margin: 0;
+  margin-top: 3em;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.form__label {
+  grid-column: span 2;
+}
+
+.form__input {
+  margin: 0;
+  margin-top: 0.5em;
+  grid-column: span 2;
+  width: 80%;
+}
+
+.check__wrap {
+  grid-column: span 2;
+  margin-top: 1.5rem;
+}
+
+.form__check {
+  margin: 0;
+}
+
+.form__checkbox {
+  margin: 0;
+  margin-left: 2em;
+}
+
+.form__button {
+  margin: 0;
+  margin-top: 2em;
+  height: 2.5em;
+  width: 15em;
+  background-color: rgb(65, 65, 65);
+  color: aliceblue;
+  border-radius: 25px;
+}

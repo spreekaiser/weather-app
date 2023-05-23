@@ -31,15 +31,17 @@ export default function Form({ onAddActivity }) {
         type="text"
         className="form__input"
       ></input>
-      <label htmlFor="isGoodWeather" className="form__label">
-        Outdoor activity?
-      </label>
-      <input
-        id="isGoodWeather"
-        name="isGoodWeather"
-        type="checkbox"
-        className="form__input"
-      ></input>
+      <div className="check__wrap">
+        <label htmlFor="isGoodWeather" className="form__check">
+          Outdoor activity?
+        </label>
+        <input
+          id="isGoodWeather"
+          name="isGoodWeather"
+          type="checkbox"
+          className="form__checkbox"
+        ></input>
+      </div>
       <button type="submit" className="form__button">
         Submit
       </button>
