@@ -1,7 +1,7 @@
 import React from "react";
 import "./List.css";
 
-export default function List({ activities, goodWeather }) {
+export default function List({ activities, goodWeather, onDeleteActivity }) {
   return (
     <>
       <h3 className="list__heading">
@@ -14,6 +14,7 @@ export default function List({ activities, goodWeather }) {
         {activities?.map((activity) => (
           <li key={activity.id} className="list__item">
             <h3>{activity.name}</h3>
+            <button onClick={() => onDeleteActivity(activity.id)}>✕</button>
           </li>
         ))}
       </ul>
