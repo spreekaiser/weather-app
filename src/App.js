@@ -1,3 +1,4 @@
+import Header from "./components/Header/Header";
 import Form from "./components/Form/Form";
 import List from "./components/List/List";
 import { useEffect, useState } from "react";
@@ -8,7 +9,7 @@ function App() {
   const [activities, setActivities] = useLocalStorageState("activities", {
     defaultValue: [],
   });
-  const [goodWeather, setGoodWeather] = useState(false);
+  const [weather, setWeather] = useState([]);
 
   useEffect(() => {
     async function fetchWeather() {
@@ -19,7 +20,7 @@ function App() {
         const data = await response.json();
         console.log("Data: ", data);
 
-        setGoodWeather(data.isGoodWeather);
+        setWeather(data);
       } catch (error) {
         console.log(error);
       }
@@ -40,12 +41,14 @@ function App() {
 
   return (
     <main>
-      <Form onAddActivity={handleAddActivity} />
+      <Header weather={weather} />
       <List
         activities={activities.filter(
-          (activity) => activity.isGoodWeather === goodWeather
+          (activity) => activity.isGoodWeather === weather.isGoodWeather
         )}
+        goodWeather={weather.isGoodWeather}
       />
+      <Form onAddActivity={handleAddActivity} />
     </main>
   );
 }
