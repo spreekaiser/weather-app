@@ -1,8 +1,22 @@
-.header__emoji {
-  margin: 0;
-  font-size: 3em;
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.header__temperature {
+.header__weather {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.header__weather > * {
   margin: 0;
+  font-size: 2.5em;
+}
+
+.header__call {
+  margin: 0;
+  line-height: 0.8;
 }
