@@ -22,8 +22,8 @@ export default function Form({ onAddActivity }) {
   }
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <h2>Add activity:</h2>
-      <div className="form__input">
+      <h3>Add activity:</h3>
+      <div className="form__activity">
         <input
           id="activity"
           name="activity"
@@ -32,10 +32,12 @@ export default function Form({ onAddActivity }) {
         ></input>
       </div>
       <div className="form__select">
-        <input type="radio" id="outdoor" name="outdoor" value="outdoor"></input>
-        <label htmlFor="outdoor">Outdoor</label>
-        <input type="radio" id="indoor" name="outdoor"></input>
-        <label htmlFor="indoor">Indoor</label>
+        <div>
+          <input type="radio" id="outdoor" name="outdoor" value="outdoor"></input>
+          <label htmlFor="outdoor">Outdoor</label>
+          <input type="radio" id="indoor" name="outdoor"></input>
+          <label htmlFor="indoor">Indoor</label>
+        </div>
         <button type="submit" className="form__button">
           Submit
         </button>

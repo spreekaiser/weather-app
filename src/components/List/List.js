@@ -7,7 +7,7 @@ export default function List({ activities, goodWeather, onDeleteActivity }) {
       <ul className="list">
         {activities?.map((activity) => (
           <li key={activity.id} className="list__item">
-            <h3 className="list__activity">{activity.name}</h3>
+            {activity.name}
             <button
               className="list__button"
               onClick={() => onDeleteActivity(activity.id)}

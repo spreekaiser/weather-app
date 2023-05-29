@@ -5,20 +5,19 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 25px;
   position: relative;
-  width: 80%;
-  height: 100%;
+  width: 94vw;
   z-index: 2;
   background-color: rgba(255,255,255,0.5);
   border-radius: 10px;
-  padding: 30px 60px 50px 60px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  padding: 3vw 3vw;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.10), 0 6px 6px rgba(0,0,0,0.12);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 777px) {
  .main {
-  width: 960px;
+  width: 700px;
  }
 }
 

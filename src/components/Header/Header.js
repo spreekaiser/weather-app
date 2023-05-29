@@ -2,7 +2,7 @@ import React from "react";
 import "./Header.css";
 
 export default function Header({ weather, real, onToggleReal }) {
-  function handleClick() {
+  function handleToggleReal() {
     onToggleReal();
   }
   return (
@@ -10,10 +10,10 @@ export default function Header({ weather, real, onToggleReal }) {
     <div className="header__weather">
       <div>{weather.condition}</div>
       <h1>{weather.temperature}°C</h1>
-      <button className="header__button" onClick={handleClick}>
+      <button className="header__button" onClick={handleToggleReal}>
         {!real
-          ? "real"
-          : "fake"
+          ? "Berlin"
+          : "Random"
         }
       </button>
     </div>
